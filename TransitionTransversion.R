@@ -19,9 +19,13 @@ res
 data(woodmouse)
 
 ti<-titv(woodmouse)
-tv<-t(ti) tv[lower.tri(tv)] #Number of transversions
+tv<-t(ti)
+
+tv[lower.tri(tv)] #Number of transversions
 ti[lower.tri(ti)] #Number of transitions
 
 #Saturation plot
-dist<-dist.dna(woodmouse) plot(ti[lower.tri(ti)]~dist)
+dist<-dist.dna(woodmouse)
+
+plot(ti[lower.tri(ti)]~dist)
 points(tv[lower.tri(tv)]~dist, pch=20, col=”red”)
