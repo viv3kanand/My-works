@@ -1,6 +1,6 @@
 library(ape)
 #Input: dat—an object of class ‘DNAbin’
-
+#woodmouse <- read.dna("woodmouse.txt", format = "sequential")
 titv<-function(dat){
 mat<-as.matrix(dat)
 res<-matrix(NA, ncol=dim(mat)[1], nrow=dim(mat)[1], dimnames=list(x=names(dat), y=names(dat)))
